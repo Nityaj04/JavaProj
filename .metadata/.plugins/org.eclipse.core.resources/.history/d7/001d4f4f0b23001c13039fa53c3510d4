@@ -1,0 +1,16 @@
+package testfinalproject;
+
+//Creating an interface
+public interface PrivateInfo {
+	
+	//abstract methods
+	public void welcome();
+	
+	//this method returns a string
+	public String dayPlanner();	
+	
+	public void membership();	
+	public void workout();
+	public void calorieCalculator() ;
+	
+}

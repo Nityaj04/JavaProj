@@ -1,0 +1,185 @@
+package testfinalproject;
+
+import java.util.Scanner;
+
+public class CalorieCal extends Implementation{
+	
+	
+	private String userName = "MyUserName";
+	private String password = "MyPassword";	
+	private String name;
+	Scanner sc = new Scanner(System.in);
+		
+	public CalorieCal(String name) {
+		super();
+		this.name = name;
+		System.out.println("Welcome "+name);
+		System.out.println("Please enter your name");
+		String pname = sc.next();
+		System.out.println("Hi "+pname+ "!");
+		System.out.println(" ");
+		
+	}
+	public CalorieCal() {
+		
+	}
+	public void workout() {
+	System.out.println("Here are a few recommendations about the workout based on your calorie intake");
+	Scanner scn = new Scanner(System.in);
+	System.out.println("Enter number of days");
+	int number = scn.nextInt();
+	
+	String days[]= new String[number];
+	
+	
+	int calorie[]=new int[number];
+	
+	
+	for(int i=0;i<number;i++) {
+		
+		System.out.println("Enter day: ");			
+		days[i] = scn.next();
+		
+		System.out.println("Enter calorie: ");			
+		calorie[i] = scn.nextInt();			
+	}
+	
+	for(int i=0;i<number;i++) {
+		if(calorie[i]<=2200){
+			System.out.println(calorie[i]+ " is not bad");
+			System.out.println("You can walk 20 minutes");
+		}
+		if(calorie[i]>2200 && calorie[i]<=3000)  {
+			System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+			System.out.println("You have to walk 6000 steps");
+		}
+		if(calorie[i]>3100 && calorie[i]<=4000) {
+			System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+			System.out.println("You have to jog for 30 minutes");
+		}
+		if(calorie[i]>=4100 && calorie[i]<=5000) {
+			System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+			System.out.println("You have to jog for 40 minutes");
+		}
+		if(calorie[i]>5000){
+			System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+			System.out.println("You have to jog for 50 minutes");
+		}
+	}
+	}
+	
+	
+
+	public void bank() {
+	System.out.println("You have to make a payment for your bank");
+	System.out.println(" ");
+	System.out.println("Do you need more details? (yes/no)");
+		 
+	
+	 String ans = sc.next();
+	 if(ans.equals("yes")) {
+		System.out.println("Your username is " + userName);
+		System.out.println("Your password is " + password);
+	 }
+		else {
+		System.out.println("Great!");
+		}
+	}	
+		public int calorieCalculator() {
+			System.out.println("You can calculate your intake of calories from foods that you ate");
+			
+		final int femaleCalorie = 2000;
+		final int maleCalorie = 2500;
+		String genderOne = "male";
+		String genderTwo = "female";
+		
+		int foodNumber=1, total=0, temp =0, diff=0;
+		
+		do {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the food number");
+		System.out.println("1.Pizza");
+		System.out.println("2.Hamburger");
+		System.out.println("3.Fries");
+		System.out.println("4.Ice crean sundae");
+		System.out.println("5.Exit");
+		System.out.println("***********************************");
+		foodNumber= sc.nextInt();
+		
+		if(foodNumber==5) {
+		System.out.println("Thank you!");
+		break;
+		}
+		
+		if(foodNumber>=6) {
+			System.out.println("Please enter a valid number");
+			break;
+		
+		}
+		
+		else {
+		System.out.println("Enter the quantity");
+		
+		int quantity = sc.nextInt();	
+		
+		switch(foodNumber) { 
+		case 1:
+			total=600*quantity;
+			System.out.println("Consumed calories "+total);
+			break;
+			      
+		case 2:	
+			total=450*quantity;
+			System.out.println("Consumed calories "+total);
+			break;
+		
+		case 3:
+			total=300*quantity;
+			System.out.println("Consumed calories "+total);  
+			break;
+			
+		case 4:
+			total=350*quantity;
+			System.out.println("Consumed calories "+total);  
+			break;
+			
+				}		
+		
+		temp=total+temp;
+		System.out.println("Total calories for the day "+temp);
+		
+		
+		System.out.println("Enter your gender");
+		String gender = sc.next();
+		
+		if (gender.equals("male")) {
+			
+			
+		}
+			
+		if(temp<=femaleCalorie ) {
+			System.out.println("Generally, the recommended daily calorie intake is 2,000 calories a day for women and 2,500 for men");
+					
+					System.out.println("For Female : You have consumed " + temp + " calories of your daily intake");
+									
+					System.out.println(" ");
+		}
+		if(temp<)
+		else {
+			diff = temp - femaleCalorie;
+			System.out.println("Your have exceeded "+ diff + " calories of your daily intake" );
+			System.out.println(" ");
+		}	
+		
+		}
+		} while (foodNumber<5);
+		return diff;
+		}
+		}
+	
+				
+		
+	
+		
+

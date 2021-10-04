@@ -1,0 +1,145 @@
+package testfinalproject;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Test {
+	
+	
+	public static void main(String[] args) {
+			
+	int i = 0;
+		
+		Implementation imple = new Implementation();
+		CalorieCal obj = new CalorieCal("Guest");
+		Implementation childObj = new CalorieCal();
+		
+		String day = imple.dayPlanner();
+		
+		do{
+			
+			if(day.equals("Sunday")){
+				 System.out.println("===============================================");
+				 System.out.println("Here is the today's schedule, Choose one of the options below");
+				 System.out.println("1. Bank payment");
+				 System.out.println("2. Calorie Calculator");				
+				 System.out.println("3. Exit");
+				 System.out.println("===============================================");
+				 
+				 Scanner scanner = new Scanner(System.in);
+				 int option = scanner.nextInt();
+				 System.out.println("Your choice is " + option);
+				 System.out.println(" ");
+				 				
+				 if (option==1) {
+					 childObj.bank();
+				 }
+				 else if(option==2) {
+					 childObj.calorieCalculator();
+					 
+				 }
+				
+				else if (option==5) {
+					 System.out.println("Thank you!");
+					 break;
+				}
+				 }
+			}while (i<=4);
+		
+		do{
+			
+			if(day.equals("Tuesday")){
+				 System.out.println("===============================================");
+				 System.out.println("Here is the today's schedule, Choose one of the options below");
+				 System.out.println("1. Membership");
+				 System.out.println("2. Calorie Calculator");				 
+				 System.out.println("3. Exit");
+				 
+				 System.out.println("===============================================");
+				 
+				 Scanner scanner = new Scanner(System.in);
+				 int option = scanner.nextInt();
+				 System.out.println("Your choice is " + option);
+				 
+				
+				 if(option==1) {
+					 childObj.membership();
+					 
+				 }
+				 else if(option==2) {	
+					 childObj.calorieCalculator();
+				 }
+				 
+				else if (option==3) {
+					 System.out.println("Thank you!");
+					 break;
+				}
+				 }
+			}while (i<=4);
+
+		do{
+	
+	if(day.equals("Wednesday")){
+		 System.out.println("===============================================");
+		 System.out.println("Here is the today's schedule, Choose one of the options below");
+		 System.out.println("1. Lessons");
+		 System.out.println("2. Calorie Calculator");				
+		 System.out.println("3. Exit");
+		 System.out.println("===============================================");
+		 
+		 Scanner scanner = new Scanner(System.in);
+		 int option = scanner.nextInt();
+		 System.out.println("Your choice is " + option);
+		 System.out.println(" ");
+		 				
+		 if (option==1) {
+			 childObj.lesson();
+		 }
+		 else if(option==2) {
+			 childObj.calorieCalculator();
+			 
+		 }
+		 
+		else if (option==3) {
+			 System.out.println("Thank you!");
+			 break;
+		}
+		 }
+	}while (i<=4);
+
+		do{
+	
+	if(day.equals("Monday")){
+		 System.out.println("===============================================");
+		 System.out.println("Here is the today's schedule, Choose one of the options below");
+		 System.out.println("1. Workout");
+		 System.out.println("2. Calorie Calculator");				
+		 System.out.println("3. Exit");
+		 System.out.println("===============================================");
+		 
+		 Scanner scanner = new Scanner(System.in);
+		 int option = scanner.nextInt();
+		 System.out.println("Your choice is " + option);
+		 System.out.println(" ");
+		 				
+		 if (option==1) {
+			 childObj.workout();
+		 }
+		 else if(option==2) {
+			 childObj.calorieCalculator();
+			 
+		 }
+		 
+		else if (option==3) {
+			 System.out.println("Thank you!");
+			 break;
+		}
+		 }
+	}while (i<=4);
+		}
+	
+	}
+

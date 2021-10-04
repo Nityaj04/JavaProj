@@ -1,0 +1,66 @@
+package inheritance;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class Son extends Father {
+	public void commonMethod() {
+		System.out.println("Son: I am a common method!");
+	}
+	
+	
+
+	public static void main(String[] args) {
+		Son obj = new Son();
+		System.out.println("Hair Color:" + obj.hairColor);
+		System.out.println("Weight:" + obj.weight);
+		obj.fatherMethod();
+		obj.commonMethod();
+		
+		Scanner scn = new Scanner(System.in);
+		System.out.println("Enter number of days");
+		int number = scn.nextInt();
+		
+		String days[]= new String[number];
+		
+		
+		int calorie[]=new int[number];
+		
+		
+		for(int i=0;i<number;i++) {
+			
+			System.out.println("Enter day: ");			
+			days[i] = scn.next();
+			
+			System.out.println("Enter calorie: ");			
+			calorie[i] = scn.nextInt();			
+		}
+		
+		for(int i=0;i<number;i++) {
+			if(calorie[i]<=2200){
+				System.out.println(calorie[i]+ " is not bad");
+				System.out.println("You can walk 20 minutes");
+			}
+			if(calorie[i]>2200 && calorie[i]<=3000)  {
+				System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+				System.out.println("You have to walk 6000 steps");
+			}
+			if(calorie[i]>3100 && calorie[i]<=4000) {
+				System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+				System.out.println("You have to jog for 30 minutes");
+			}
+			if(calorie[i]>=4100 && calorie[i]<=5000) {
+				System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+				System.out.println("You have to jog for 40 minutes");
+			}
+			if(calorie[i]<5000){
+				System.out.println(calorie[i]+ " is bit higher than average daily intake ");
+				System.out.println("You have to jog for 50 minutes");
+			}
+		}
+		
+
+	}
+
+}

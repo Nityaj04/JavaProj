@@ -1,0 +1,11 @@
+package testfinalproject;
+
+public interface PrivateInfo {
+	
+	public void welcome();
+	public String dayPlanner();	
+	public void membership();	
+	public void workout();
+	public int calorieCalculator() ;
+	
+}

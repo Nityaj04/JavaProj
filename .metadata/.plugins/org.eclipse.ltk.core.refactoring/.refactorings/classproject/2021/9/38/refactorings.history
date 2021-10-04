@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;IfAndScanner.java&apos; to &apos;arrayexamplea/src/arrayexamplea&apos;&#x0D;&#x0A;- Original project: &apos;classproject&apos;&#x0D;&#x0A;- Destination element: &apos;arrayexamplea/src/arrayexamplea&apos;&#x0D;&#x0A;- Original element: &apos;classproject.IfAndScanner.java&apos;" description="Copy compilation unit" destination="=arrayexamplea/src&lt;arrayexamplea" element1="/src&lt;classproject{IfAndScanner.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1631830396420" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,134 @@
+package testfinalproject;
+
+//Libraries
+import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+//Creating a superclass that implements methods of the interface 
+public class Implementation implements PrivateInfo {
+			//Declaring a string variable
+			String dayWeekText;
+			
+			//Creating private variables
+			private String name;
+	
+	public String getName() {
+				return name;
+			}
+	public void setName(String name) {
+				this.name = name;
+			}
+
+	//This method returns current date in string format
+	public static String date() {
+		
+		//Outputs current date in yyyy-MM-dd format
+		LocalDate date = LocalDate.now();
+		
+		//Converts date into String
+		String dateString = date.toString();
+		System.out.println(dateString);
+		return dateString;		
+	 }
+	
+	//This method returns day of the week in number and name
+	public String dayPlanner() {
+		
+		//Initializes object with current Date 
+		Date date=new Date();
+		
+		//getInstance() method returns the calendar using the current time zone
+	    Calendar cal = Calendar.getInstance();
+	    
+	    //gets number of the day in a week
+	    int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+	    
+	   //EEEEE returns the day of the week in text
+	    SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEE");
+	   //converting and storing it in a string variable 
+	    String dayWeekText =  dateFormat.format(date);	    
+	     
+	    System.out.println("Today is "+dayWeekText);
+	    System.out.println("We are on day " + dayOfWeek + " of the week ");
+	    return dayWeekText;
+		}
+
+	//The method outputs the number of days left before the membership expires
+	public void membership() {
+			
+		System.out.println("Today is: ");
+		
+		//Gets date String from the date method
+		String today = date();
+		System.out.println(" ");
+		
+		//Created variables for each membership
+		String gymExpDate = "2021-11-27";
+		String primeExpDate = "2021-10-29";
+		String netflixExpDate = "2022-01-10";
+		String recreationExpDate = "2021-12-12";
+		 
+		//Parsing variables to return dates
+		LocalDate currentDate = LocalDate.parse(today);
+		LocalDate gym = LocalDate.parse(gymExpDate);		
+		LocalDate amazon = LocalDate.parse(primeExpDate);
+		LocalDate netflix = LocalDate.parse(netflixExpDate);
+		LocalDate rec = LocalDate.parse(recreationExpDate);			
+		
+		//Creating a scanner object
+		Scanner scan = new Scanner(System.in);
+		
+		//Prompting user input
+		System.out.println("Choose an option below to see how many days are left in your membership");
+		System.out.println(" ");
+		System.out.println("gym---->Gym Membership");
+		System.out.println("amazon ---->Amazon Prime membership");
+		System.out.println("netflix---->Netflix membership");
+		System.out.println("rec---->Recreation Center membership");
+		System.out.println(" ");
+		
+		String option = scan.nextLine();
+			
+			if(option.equals("gym")) {	
+				//Compares the dates to find the days
+				long noOfDaysBetween = ChronoUnit.DAYS.between(currentDate, gym);		
+					System.out.println(noOfDaysBetween+" days left");
+			}
+			
+			else if(option.equals("amazon")) {			
+				long noOfDaysBetween = ChronoUnit.DAYS.between(currentDate, amazon);
+					System.out.println(noOfDaysBetween+ " days left");
+			}
+			
+			else if(option.equals("netflix")) {			
+				long noOfDaysBetween = ChronoUnit.DAYS.between(currentDate, netflix);
+					System.out.println(noOfDaysBetween+ " days left");
+				}
+			
+			if(option.equals("rec")) {			
+				long noOfDaysBetween = ChronoUnit.DAYS.between(currentDate, rec);			
+					System.out.println(noOfDaysBetween+" days left");
+				}
+			
+			}
+	
+	@Override
+	public void calorieCalculator() {
+		System.out.println("This is a calorie calculator method");
+	}
+
+	@Override
+	public void workout() {
+		System.out.println("This is a workout method");
+		
+	}
+
+}		
+		
+		

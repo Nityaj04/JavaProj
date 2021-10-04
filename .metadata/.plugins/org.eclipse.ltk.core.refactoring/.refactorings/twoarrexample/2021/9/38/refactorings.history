@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;twoDimenEx.java&apos; to &apos;arrayexamplea/src/arrayexamplea&apos;&#x0D;&#x0A;- Original project: &apos;twoarrexample&apos;&#x0D;&#x0A;- Destination element: &apos;arrayexamplea/src/arrayexamplea&apos;&#x0D;&#x0A;- Original element: &apos;twoarrexample.twoDimenEx.java&apos;" description="Copy compilation unit" destination="=arrayexamplea/src&lt;arrayexamplea" element1="/src&lt;twoarrexample{twoDimenEx.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1631830518082" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,63 @@
+package testfinalproject;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Test {
+	
+	
+	public static void main(String[] args) {
+			
+	int i = 0;
+		
+		Implementation imple = new Implementation();
+		CalorieCal obj = new CalorieCal("Guest");
+		CalorieCal object = new CalorieCal();
+		Implementation childObj = new CalorieCal();
+		object.calorieCalculator();
+	}
+	}
+		
+		/*String day = imple.dayPlanner();
+		
+		do{
+			
+			if(day.equals("Friday")){
+				 System.out.println("===============================================");
+				 System.out.println("Choose one of the options below");
+				 System.out.println("1. Membership");
+				 System.out.println("2. Workout");				 
+				 System.out.println("3. Calorie Calculator");				
+				 System.out.println("4. Exit");
+				 System.out.println("===============================================");
+				 
+				 Scanner scanner = new Scanner(System.in);
+				 int option = scanner.nextInt();
+				 System.out.println("Your choice is " + option);
+				 System.out.println(" ");
+				 				
+				 if (option==1) {
+					 childObj.membership();
+				 }
+				 else if(option==2) {
+					 childObj.workout();
+					 
+				 }
+				 else if(option==3) {
+					 childObj.calorieCalculator();					 
+				 }
+				
+				else if (option==4) {
+					 System.out.println("Thank you!");
+					 break;
+				}
+				 }
+			}while (i<=4);
+			
+		}
+	
+	}
+*/

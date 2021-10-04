@@ -1,0 +1,122 @@
+package testfinalproject;
+
+import java.util.Scanner;
+
+public class CalorieCal extends Implementation{
+	
+	
+	private String userName = "MyUserName";
+	private String password = "MyPassword";	
+	private String name;
+		
+	public CalorieCal(String name) {
+		super();
+		this.name = name;
+		System.out.println("Welcome "+name);
+	}
+	public CalorieCal() {
+		
+	}
+
+	public void bank() {
+	System.out.println("You have to make a payment for your bank");
+	System.out.println(" ");
+	System.out.println("Do you need more details?");
+		 
+	 Scanner sc = new Scanner(System.in);
+	 String ans = sc.next();
+	 if(ans.equals("yes")) {
+		System.out.println("Your username is " + userName);
+		System.out.println("Your password is " + password);
+	 }
+		else {
+		System.out.println("Great!");
+		}
+	}
+	
+	public void workout() {
+		
+	}
+	
+	public void calorieCalculator() {
+				
+		final int calorie = 2000;
+		
+		int foodNumber=1, total=0, temp =0, diff=0;
+		
+		do {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the food number");
+		System.out.println("1.Pizza");
+		System.out.println("2.Hamburger");
+		System.out.println("3.Fries");
+		System.out.println("4.Ice crean sundae");
+		System.out.println("5.Exit");
+		System.out.println("***********************************");
+		foodNumber= sc.nextInt();
+		
+		if(foodNumber==5) {
+		System.out.println("Thank you!");
+		break;
+		
+		if(foodNumber>=6) {
+			System.out.println("Please enter a valid number");
+			break;
+		
+		}
+		
+		else {
+		System.out.println("Enter the quantity");
+		
+		int quantity = sc.nextInt();	
+		
+		switch(foodNumber) { 
+		case 1:
+			total=600*quantity;
+			System.out.println("Consumed calories "+total);
+			break;
+			      
+		case 2:	
+			total=450*quantity;
+			System.out.println("Consumed calories "+total);
+			break;
+		
+		case 3:
+			total=300*quantity;
+			System.out.println("Consumed calories "+total);  
+			break;
+			
+		case 4:
+			total=350*quantity;
+			System.out.println("Consumed calories "+total);  
+			break;
+			
+				}		
+		
+		temp=total+temp;
+		System.out.println("Total calories for the day "+temp);
+		
+		if(temp<=calorie) {
+					
+					System.out.println("You have consumed " + temp + " calories of your daily intake");
+					System.out.println(" ");
+		}
+		else {
+			diff = temp - calorie;
+			System.out.println("Your have exceeded "+ diff + " calories of your daily intake" );
+			System.out.println(" ");
+		}
+		
+		
+		
+		}
+		
+		 }while(foodNumber<5);
+		}
+	}
+				
+		
+	
+		
+
